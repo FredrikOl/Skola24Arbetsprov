@@ -2,12 +2,11 @@ $(document).ready(function(){
 	
 	$('#addFranvaro').click(function(){
 		let card = new Card(absences, absenceReasons);
-		$('#franvarolist').append(card.getElement());
+		$('#franvarolist').prepend(card.getElement()); //Nya frånvaron läggs först i listan
 	});
 });
  
-class Card{
-	
+class Card{	
 	constructor(exampleAbsences, exampleReasons){
 		this.exampleAbsences = exampleAbsences;
 		this.exampleReasons = exampleReasons;
